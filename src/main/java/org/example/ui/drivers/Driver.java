@@ -18,13 +18,13 @@ public class Driver {
         if (driver == null) {
             switch (ConfigReader.getValue("browser").toLowerCase()) {
                 case "chrome":
-                    driver = new ChromeDriver();
+                    driver = ChromeWebDriver.loadChromeDriver();
                     break;
                 case "firefox":
-                    driver = new FirefoxDriver();
+                    driver = FirefoxWebDriver.loadFirefoxDriver();
                     break;
                 case "safari":
-                    driver = new SafariDriver();
+                    driver = SafariWebDriver.loadSafariDriver();
 
             }
         }
