@@ -23,7 +23,6 @@ public class WebElementHelper {
     }
     public WebElementHelper click(WebElement element){
         waitForButtonToBeClickAble(element);
-        scrollToElement(element);
         actions.click(element).perform();
         return this;
     }

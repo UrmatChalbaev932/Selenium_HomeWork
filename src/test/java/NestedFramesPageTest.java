@@ -1,10 +1,6 @@
 
-import org.example.demoqa.WebElementManager;
-import org.example.ui.drivers.Driver;
 import org.example.ui.page.NestedFramesPage;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
