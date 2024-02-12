@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 import static org.example.demoqa.WebElementManager.*;
 
 
-public class CheckBoxPageTest extends BaseTestClass {
+public class CheckBoxPageTest extends BasePageTest {
 
     CheckBoxPage checkBoxPage = new CheckBoxPage();
 
     @Test(description = "check the functionality responsible for opening the directory", priority = 0)
     void check_the_functionality_responsible_for_opening_the_directory() {
-        openTheSite();
+        openTheSite("https://demoqa.com/checkbox");
         checkBoxPage
                 .clickOpenDirectHome()
                 .clickOpenDirectDesktop()

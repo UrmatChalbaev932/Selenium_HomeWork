@@ -19,7 +19,8 @@ public class FrameHelper {
     }
     public FrameHelper switchToFrame(WebElement element){
         try{
-            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));//эта строка кода указывает
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
+            //эта строка кода указывает
             // Selenium подождать, пока указанный фрейм (представленный параметром element) станет доступным,
             // и затем переключить фокус драйвера на этот фрейм. Обычно это используется в сценариях,
             // где необходимо взаимодействовать с элементами внутри встроенного фрейма на веб-странице.

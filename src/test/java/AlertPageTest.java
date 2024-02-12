@@ -4,12 +4,13 @@ import org.testng.annotations.Test;
 import static org.example.demoqa.WebElementManager.findElementByIdGetText;
 import static org.testng.Assert.assertEquals;
 
-public class AlertPageTest extends BaseTestClass {
+public class AlertPageTest extends BasePageTest {
     AlertPage alertPage = new AlertPage();
     AlertHelper alertHelper = new AlertHelper();
 
     @Test(description = "alert check", priority = 0)
     void alert_check() {
+        openTheSite("https://demoqa.com/alerts");
         alertPage.clickAlertButton();
         assertEquals(alertHelper.getTextAlert(), "You clicked a button");
         alertHelper.acceptAlert();

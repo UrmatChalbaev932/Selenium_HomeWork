@@ -6,12 +6,12 @@ import static org.example.demoqa.WebElementManager.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class RadioButtonPageTest extends BaseTestClass {
+public class RadioButtonPageTest extends BasePageTest {
     RadioButtonPage radioButtonPage = new RadioButtonPage();
 
     @Test(description = "check yesRadioButton functionality", priority = 0)
     void check_yesRadioButton_functionality() {
-        openTheSite();
+        openTheSite("https://demoqa.com/radio-button");
         assertEquals(getCurrentUrl(), "https://demoqa.com/radio-button");
         radioButtonPage
                 .clickYesRadioBtn();

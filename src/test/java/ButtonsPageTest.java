@@ -1,22 +1,18 @@
-import org.example.ui.drivers.Driver;
 import org.example.ui.helper.WindowHelper;
 import org.example.ui.page.ButtonsPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import static org.example.demoqa.WebElementManager.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class ButtonsPageTest extends BaseTestClass {
+public class ButtonsPageTest extends BasePageTest {
     ButtonsPage buttonsPage = new ButtonsPage();
     WindowHelper windowsHelper = new WindowHelper();
 
     @Test(description = "check double click", priority = 0)
     void check_double_click() {
-        openTheSite();
+        openTheSite("https://demoqa.com/buttons");
         assertEquals(getCurrentUrl(), "https://demoqa.com/buttons");
         buttonsPage
                 .doubleClickBtn();

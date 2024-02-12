@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 import static org.example.demoqa.WebElementManager.*;
 import static org.testng.Assert.assertEquals;
 
-public class TextBoxPageTest extends BaseTestClass {
+public class TextBoxPageTest extends BasePageTest {
     TextBoxPage textBoxPage = new TextBoxPage();
 
     @Test (description = "fill up the form positive test", priority = 0)
     void fill_up_the_form_positive_test(){
-        openTheSite();
+        openTheSite("https://demoqa.com/text-box");
         textBoxPage.fillUpFullName("Test")
                 .fillUpEmail("Test@gmail.com")
                 .fillUpCurrentAddress("Test city test street test house test apartment test apartment test")
@@ -28,7 +28,7 @@ public class TextBoxPageTest extends BaseTestClass {
     }
     @Test (description = "fill up the form negative test with empty field", priority = 1)
     void fill_up_the_form_negative_test(){
-        openTheSite();
+        openTheSite("https://demoqa.com/text-box");
         textBoxPage.fillUpFullName("")
                 .fillUpEmail("")
                 .fillUpCurrentAddress("")
