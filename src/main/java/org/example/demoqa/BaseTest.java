@@ -17,4 +17,7 @@ public abstract class BaseTest extends WebDriverManager {
     public void tearDown() {
         closeDriver();
     }
+
+
+
 }
