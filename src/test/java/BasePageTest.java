@@ -1,3 +1,4 @@
+import org.example.demoqa.WebElementManager;
 import org.example.ui.config.ConfigReader;
 import org.example.ui.drivers.Driver;
 import org.openqa.selenium.WebDriver;
