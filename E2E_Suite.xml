@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/user/IdeaProjects/Selenium_HomeWork">
+        <classes>
+            <class name="org.example.demoqa.Locators.ByClassName">
+                <methods>
+                    <include name="byClassNameTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.Locators.ById">
+                <methods>
+                    <include name="byIdTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.Locators.ByLinkedText">
+                <methods>
+                    <include name="byLinkedTextTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.Locators.ByPartialLinkText">
+                <methods>
+                    <include name="byPartialLinkTextTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.Locators.ByXpath">
+                <methods>
+                    <include name="byXpathTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.Locators.CssSelector">
+                <methods>
+                    <include name="cssSelectorTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.Locators.CustomLocators">
+                <methods>
+                    <include name="byClassNameTest"/>
+                    <include name="byLinkedTextTest"/>
+                    <include name="byPartialLinkTextTest"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.OrangehrmliveLoginTest">
+                <methods>
+                    <include name="login_with_valid_username_and_valid_password"/>
+                    <include name="login_with_valid_username_and_invalid_password"/>
+                    <include name="login_with_empty_username_and_empty_password"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.mouseInterection.Buttons">
+                <methods>
+                    <include name="double_click_btn_test"/>
+                    <include name="right_click_me_btn_test"/>
+                    <include name="lick_me_btn_test"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.mouseInterection.CheckBox">
+                <methods>
+                    <include name="select_home_directory_test"/>
+                    <include name="open_home_directory_test"/>
+                    <include name="select_desktop_directory_test"/>
+                    <include name="open_desktop_directory_test"/>
+                    <include name="select_notes_file_test"/>
+                    <include name="select_Commands_file_test"/>
+                    <include name="closeDesktop"/>
+                    <include name="select_document_directory_test"/>
+                    <include name="open_document_directory_test"/>
+                </methods>
+            </class>
+            <class name="org.example.demoqa.mouseInterection.RadioButton">
+                <methods>
+                    <include name="click_yes_radio_btn_test"/>
+                    <include name="click_Impressive_radio_btn_test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,10 +1,12 @@
 import org.example.demoqa.WebElementManager;
+import org.example.ui.listener.ScreenshotListener;
 import org.example.ui.page.TextBoxPage;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.demoqa.WebElementManager.*;
 import static org.testng.Assert.assertEquals;
-
+@Listeners(ScreenshotListener.class)//наблюдает за этим классом
 public class TextBoxPageTest extends BasePageTest {
     TextBoxPage textBoxPage = new TextBoxPage();
 

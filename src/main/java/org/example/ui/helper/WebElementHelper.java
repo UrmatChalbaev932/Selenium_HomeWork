@@ -14,6 +14,8 @@ import java.awt.image.Kernel;
 import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 public class WebElementHelper {
 
@@ -34,6 +36,7 @@ public class WebElementHelper {
 
     public WebElementHelper click(WebElement element) {
         waitForButtonToBeClickAble(element);
+        jsClick(element);
         actions.click(element).perform();
         return this;
     }
@@ -62,10 +65,24 @@ public class WebElementHelper {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
         return this;
     }
+
+    public WebElementHelper jsClick(WebElement element){
+        waitForElementsToBeDisplayed(element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+        return this;
+    }
     public WebElementHelper sendKeysWithEnter(WebElement element, String text){
         waitForElementsToBeDisplayed(element);
         element.sendKeys(text);
         element.sendKeys(Keys.ENTER);
+        return this;
+    }
+    public WebElementHelper pause (int milliseconds){
+        try{
+            TimeUnit.MILLISECONDS.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 }

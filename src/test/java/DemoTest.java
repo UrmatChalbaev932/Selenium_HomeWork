@@ -1,3 +1,4 @@
+import io.qameta.allure.testng.Tag;
 import org.example.ui.data.EmployeeEntityFaker;
 import org.example.ui.data.LoginUserEntityFaker;
 import org.example.ui.drivers.Driver;
@@ -75,4 +76,5 @@ public class DemoTest extends BasePageTest {
         webElementHelper.sendKeysWithEnter(selectMenuPage.selectValueInput, "Pro");
         Thread.sleep(5000);
      }
+
 }

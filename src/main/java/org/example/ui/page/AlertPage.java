@@ -1,6 +1,7 @@
 package org.example.ui.page;
 
 import com.google.common.cache.Weigher;
+import io.qameta.allure.Step;
 import org.checkerframework.common.util.report.qual.ReportInherit;
 import org.example.ui.drivers.Driver;
 import org.example.ui.helper.AlertHelper;
@@ -18,6 +19,8 @@ import javax.swing.*;
 import java.time.Duration;
 
 public class AlertPage {
+
+
     Actions actions = new Actions(Driver.getDriver());
     WebElementHelper webElementHelper = new WebElementHelper();
     AlertHelper alertHelper = new AlertHelper();
@@ -35,26 +38,27 @@ public class AlertPage {
     @FindBy(id = "promtButton")
     public WebElement WebElementPromBtn;
 
+    @Step("clickAlertButton")
     public AlertPage clickAlertButton() {
         WebElementAlertButton.click();
         return this;
     }
-
+    @Step("clickTimerAlertButton")
     public AlertPage clickTimerAlertButton() {
         WebElementTimerAlertButton.click();
         return this;
     }
-
+    @Step("clickConfirmBtn")
     public AlertPage clickConfirmBtn() {
         WebElementConfirmBtn.click();
         return this;
     }
-
+    @Step("clickPromBtn")
     public AlertPage clickPromBtn() {
         WebElementPromBtn.click();
         return this;
     }
-
+    @Step("acceptAlert")
     public AlertPage acceptAlert() {
         alertHelper.acceptAlert();
         return this;

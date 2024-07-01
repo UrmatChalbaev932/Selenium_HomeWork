@@ -2,11 +2,6 @@ package org.example.ui.drivers;
 
 import org.example.ui.config.ConfigReader;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
-
-import java.io.IOException;
 
 public class Driver {
     private static WebDriver driver;

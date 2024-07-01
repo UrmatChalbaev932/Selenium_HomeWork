@@ -1,5 +1,6 @@
 package org.example.ui.helper;
 
+import io.qameta.allure.Step;
 import org.example.ui.drivers.Driver;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
@@ -15,8 +16,7 @@ public class AlertHelper {
     }
 
     public void acceptAlert() {
-        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(7))
-                .until(ExpectedConditions.alertIsPresent());
+        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(7)).until(ExpectedConditions.alertIsPresent());
         if (!isAlertPresent()){
             return; // stop
         }
